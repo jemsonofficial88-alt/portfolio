@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Personal Portfolio Website",
+    "category": "Web Development",
+    "description": "A responsive, modular personal portfolio built with semantic HTML5, modern CSS3, and vanilla JavaScript to document skills, learning milestones, and projects.",
+    "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    "image": "assets/images/projects/portfolio-preview.webp",
+    "github": "https://github.com/",
+    "demo": "#"
+  },
+  {
+    "id": 2,
+    "title": "Python Web Scraper & Data Extractor",
+    "category": "Python",
+    "description": "Automated data extraction tool written in Python to fetch, parse, and save structured website data into JSON and CSV formats with error handling.",
+    "tags": ["Python", "Web Scraping", "JSON", "Automation"],
+    "image": "assets/images/projects/scraper-preview.webp",
+    "github": "https://github.com/",
+    "demo": ""
+  },
+  {
+    "id": 3,
+    "title": "Python Task & File Automation Scripts",
+    "category": "Python",
+    "description": "Collection of productivity scripts utilizing Python's standard library for batch file renaming, data transformation, and routine task automation.",
+    "tags": ["Python", "File I/O", "CLI", "Automation"],
+    "image": "assets/images/projects/automation-preview.webp",
+    "github": "https://github.com/",
+    "demo": ""
+  },
+  {
+    "id": 4,
+    "title": "Roblox Adventure / Mechanics Demo",
+    "category": "Game Development",
+    "description": "Interactive Roblox game prototype built with Luau and Roblox Studio, featuring custom player inventory, leaderboards, and interactive game mechanics.",
+    "tags": ["Roblox Studio", "Luau", "Game Design", "UI"],
+    "image": "assets/images/projects/roblox-preview.webp",
+    "github": "",
+    "demo": "https://www.roblox.com/"
+  }
+]

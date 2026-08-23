@@ -1,0 +1,30 @@
+[
+  {
+    "period": "2025 - Present",
+    "title": "Bachelor of Science in Information Technology (BSIT)",
+    "institution": "Central Philippines State University (CHMSU) – Alijis Campus",
+    "type": "Education",
+    "description": "1st-year student focusing on building strong technical foundations in computer science, programming, networking, and information systems."
+  },
+  {
+    "period": "Completed (Grade 11 - Grade 12)",
+    "title": "Senior High School - TVL Track / Computer Studies",
+    "institution": "iTech Computer Education Bago City Inc.",
+    "type": "Education",
+    "description": "Completed secondary education with focused technical and vocational training in computer education."
+  },
+  {
+    "period": "Ongoing",
+    "title": "Roblox Game Developer & Scripting (Luau)",
+    "institution": "Independent Project",
+    "type": "Project / Hobby",
+    "description": "Designing game systems, learning Luau and Roblox Studio, and building playable experiences as a long-term personal venture."
+  },
+  {
+    "period": "Available",
+    "title": "Freelance Web & Python Scripting",
+    "institution": "Self-Employed",
+    "type": "Freelance",
+    "description": "Providing honest, entry-level development services including basic websites, landing pages, Python automation scripts, and web scraping."
+  }
+]

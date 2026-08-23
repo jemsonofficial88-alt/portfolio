@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Web Development (Foundations)",
+    "description": "Solid foundation in core web standards and responsive layout development.",
+    "items": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "Responsive Web Design",
+      "Frontend UI Layouts",
+      "DOM Manipulation"
+    ]
+  },
+  {
+    "category": "Python Programming",
+    "description": "Practical experience with core programming concepts, data structures, scripting, and automation.",
+    "items": [
+      "Python Fundamentals",
+      "Control Flow & Loops",
+      "Data Structures (Lists, Dicts, Tuples, Sets)",
+      "Functions & OOP Basics",
+      "File & JSON Handling",
+      "Exception Handling",
+      "Modules & Imports",
+      "Web Scraping (BeautifulSoup/Requests)",
+      "Basic Scripting & Task Automation"
+    ]
+  },
+  {
+    "category": "Game Development & Creative",
+    "description": "Designing interactive game systems and scripting logic during weekends.",
+    "items": [
+      "Roblox Studio",
+      "Luau Scripting",
+      "Game Systems Architecture",
+      "Gameplay Mechanics & UI"
+    ]
+  },
+  {
+    "category": "Currently Learning & Exploring",
+    "description": "Active learning goals focused on infrastructure, systems, and security.",
+    "items": [
+      "Cloud Engineering Fundamentals",
+      "Cybersecurity Essentials",
+      "Linux & Command Line",
+      "Computer Networking Basics",
+      "System Architecture"
+    ]
+  }
+]

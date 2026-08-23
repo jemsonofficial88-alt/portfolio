@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Jemson C. Parcon - BSIT Student, Web & Python Developer, Aspiring Cloud Engineer & Cybersecurity Enthusiast, Roblox Game Creator from Bago City, Philippines.">
+    <title>Jemson C. Parcon | Portfolio</title>
+
+    <!-- Google Fonts: Inter, Space Grotesk, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Background Particle Network & Noise Overlay -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- =========================================================================
+         Navigation Bar
+         ========================================================================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-accent">&lt;</span>Jemson<span class="logo-accent">/&gt;</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#learning" class="nav-link">Learning</a></li>
+                <li><a href="#game-dev" class="nav-link">Game Dev</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Freelance</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="docs/resume.pdf" class="btn btn-outline btn-sm nav-btn" target="_blank">
+                        <i class="fa-solid fa-file-pdf"></i> Resume
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- =====================================================================
+             Hero Section
+             ===================================================================== -->
+        <section id="hero" class="hero-section">
+            <div class="grid-bg"></div>
+            <div class="glow-orb hero-orb-1"></div>
+            <div class="glow-orb hero-orb-2"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content animate-on-scroll">
+                    <div class="hero-badge">
+                        <span class="status-dot"></span> Open for Freelance & Gigs
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="text-gradient">Jemson C. Parcon</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        1st-Year BSIT Student <span class="bullet">•</span> <span id="typing-text">Web & Python Developer</span><span class="typing-cursor"></span>
+                    </p>
+                    <p class="hero-location">
+                        <i class="fa-solid fa-location-dot"></i> Bago City, Negros Occidental, Philippines
+                    </p>
+                    <p class="hero-bio">
+                        Building a rock-solid technical foundation in software development, cloud engineering, cybersecurity, and game systems. Grounded in continuous hands-on practice.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-laptop-code"></i> View Projects
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                            <i class="fa-solid fa-handshake"></i> Freelance Gigs
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-regular fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual animate-on-scroll">
+                    <div class="profile-card">
+                        <div class="profile-avatar-wrapper">
+                            <div class="profile-avatar">
+                                <img src="assets/images/profile.png" alt="Jemson C. Parcon" class="profile-avatar-img">
+                            </div>
+                        </div>
+                        <div class="profile-meta">
+                            <h3>Jemson C. Parcon</h3>
+                            <p class="profile-tag">BSIT @ CHMSU Alijis Campus</p>
+                            <div class="profile-tech-pills">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Python</span>
+                                <span>Luau</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Tech Ticker Marquee -->
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="marquee-item"><i class="fa-brands fa-html5" style="color:#f97316;"></i> HTML5</div>
+                <div class="marquee-item"><i class="fa-brands fa-css3-alt" style="color:#38bdf8;"></i> CSS3 Flexbox & Grid</div>
+                <div class="marquee-item"><i class="fa-brands fa-js" style="color:#facc15;"></i> JavaScript ES6+</div>
+                <div class="marquee-item"><i class="fa-brands fa-python" style="color:#60a5fa;"></i> Python Automation</div>
+                <div class="marquee-item"><i class="fa-solid fa-spider" style="color:#34d399;"></i> Web Scraping</div>
+                <div class="marquee-item"><i class="fa-solid fa-gamepad" style="color:#a78bfa;"></i> Roblox Luau Scripting</div>
+                <div class="marquee-item"><i class="fa-solid fa-cloud" style="color:#38bdf8;"></i> Cloud Engineering</div>
+                <div class="marquee-item"><i class="fa-solid fa-shield-halved" style="color:#fbbf24;"></i> Cybersecurity</div>
+                <div class="marquee-item"><i class="fa-brands fa-linux" style="color:#f8fafc;"></i> Linux & Networking</div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="marquee-item"><i class="fa-brands fa-html5" style="color:#f97316;"></i> HTML5</div>
+                <div class="marquee-item"><i class="fa-brands fa-css3-alt" style="color:#38bdf8;"></i> CSS3 Flexbox & Grid</div>
+                <div class="marquee-item"><i class="fa-brands fa-js" style="color:#facc15;"></i> JavaScript ES6+</div>
+                <div class="marquee-item"><i class="fa-brands fa-python" style="color:#60a5fa;"></i> Python Automation</div>
+                <div class="marquee-item"><i class="fa-solid fa-spider" style="color:#34d399;"></i> Web Scraping</div>
+                <div class="marquee-item"><i class="fa-solid fa-gamepad" style="color:#a78bfa;"></i> Roblox Luau Scripting</div>
+                <div class="marquee-item"><i class="fa-solid fa-cloud" style="color:#38bdf8;"></i> Cloud Engineering</div>
+                <div class="marquee-item"><i class="fa-solid fa-shield-halved" style="color:#fbbf24;"></i> Cybersecurity</div>
+                <div class="marquee-item"><i class="fa-brands fa-linux" style="color:#f8fafc;"></i> Linux & Networking</div>
+            </div>
+        </div>
+
+        <!-- =====================================================================
+             About Me Section
+             ===================================================================== -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-user"></i> Background</span>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-desc">A brief overview of my education, mindset, and portfolio goals.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card animate-on-scroll">
+                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Academic Background</h3>
+                        <p>
+                            Graduated SHS from <strong>iTech Computer Education Bago City Inc.</strong> (Grade 11 & Grade 12).
+                        </p>
+                        <p class="mt-2">
+                            Currently a <strong>1st-year BSIT student at CHMSU – Alijis Campus</strong>, focusing on core computing and software systems.
+                        </p>
+                    </div>
+
+                    <div class="about-card animate-on-scroll">
+                        <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3>My Philosophy</h3>
+                        <p>
+                            Focusing on <strong>building a genuine technical foundation</strong> rather than claiming expertise I haven't mastered yet.
+                        </p>
+                        <p class="mt-2">
+                            Practicing daily through school, personal projects, and real-world hands-on coding.
+                        </p>
+                    </div>
+
+                    <div class="about-card animate-on-scroll">
+                        <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
+                        <h3>Portfolio Purpose</h3>
+                        <p>
+                            Serves as a transparent record to document my <strong>skills, projects, and learning progress</strong> over time.
+                        </p>
+                        <p class="mt-2">
+                            Continuously updated as I gain new capabilities, build projects, and earn certifications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                        <div class="counter-value" data-count="15" data-suffix="+">0</div>
+                        <div class="stat-label">Python & Web Scripts</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="counter-value" data-count="100" data-suffix="%">0</div>
+                        <div class="stat-label">Weekend Game Dev Focus</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="counter-value" data-count="1" data-suffix="st">0</div>
+                        <div class="stat-label">Year BSIT Student</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="counter-value" data-count="5" data-suffix=" Roadmap">0</div>
+                        <div class="stat-label">Growth Steps Active</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             What I Know (Skills)
+             ===================================================================== -->
+        <section id="skills" class="section section-dark">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Technical Competencies</span>
+                    <h2 class="section-title">What I Know</h2>
+                    <p class="section-desc">Practical skills and foundational technologies I actively use and practice.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Web Development -->
+                    <div class="skill-category-card animate-on-scroll">
+                        <div class="category-header">
+                            <div class="category-icon web-icon"><i class="fa-brands fa-html5"></i></div>
+                            <div>
+                                <h3>Web Development</h3>
+                                <span class="category-subtitle">Frontend & Layouts</span>
+                            </div>
+                        </div>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-check"></i> Semantic HTML5 Structure</li>
+                            <li><i class="fa-solid fa-check"></i> CSS3 (Flexbox, Grid, Animations)</li>
+                            <li><i class="fa-solid fa-check"></i> JavaScript (ES6+ & DOM API)</li>
+                            <li><i class="fa-solid fa-check"></i> Responsive Web Design</li>
+                            <li><i class="fa-solid fa-check"></i> Building Complete Landing Pages</li>
+                            <li><i class="fa-solid fa-check"></i> Frontend UI Layouts & Components</li>
+                        </ul>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="skill-category-card animate-on-scroll">
+                        <div class="category-header">
+                            <div class="category-icon python-icon"><i class="fa-brands fa-python"></i></div>
+                            <div>
+                                <h3>Python Programming</h3>
+                                <span class="category-subtitle">Scripting & Automation</span>
+                            </div>
+                        </div>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-check"></i> Variables, Data Types & Operators</li>
+                            <li><i class="fa-solid fa-check"></i> Control Flow & Loops</li>
+                            <li><i class="fa-solid fa-check"></i> Data Structures (Lists, Dicts, Tuples)</li>
+                            <li><i class="fa-solid fa-check"></i> Functions & Modular Code</li>
+                            <li><i class="fa-solid fa-check"></i> String Manipulation & File Handling</li>
+                            <li><i class="fa-solid fa-check"></i> JSON Processing & Exception Handling</li>
+                            <li><i class="fa-solid fa-check"></i> Basic OOP Concepts</li>
+                            <li><i class="fa-solid fa-check"></i> Web Scraping & Task Automation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Roblox Game Dev -->
+                    <div class="skill-category-card animate-on-scroll">
+                        <div class="category-header">
+                            <div class="category-icon game-icon"><i class="fa-solid fa-gamepad"></i></div>
+                            <div>
+                                <h3>Roblox Game Dev</h3>
+                                <span class="category-subtitle">Luau & Systems</span>
+                            </div>
+                        </div>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-check"></i> Roblox Studio Environment</li>
+                            <li><i class="fa-solid fa-check"></i> Luau Scripting & Logic</li>
+                            <li><i class="fa-solid fa-check"></i> Game Mechanics Architecture</li>
+                            <li><i class="fa-solid fa-check"></i> In-Game UI / HUD Systems</li>
+                            <li><i class="fa-solid fa-check"></i> Leaderstats & DataStore Handling</li>
+                            <li><i class="fa-solid fa-check"></i> Level Design & Mechanics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Currently Learning (Active Goals)
+             ===================================================================== -->
+        <section id="learning" class="section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Continuous Growth</span>
+                    <h2 class="section-title">Currently Learning</h2>
+                    <p class="section-desc">Active learning goals I am exploring to build my future tech career.</p>
+                </div>
+
+                <div class="learning-grid">
+                    <div class="learning-card animate-on-scroll">
+                        <div class="learning-icon cloud-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="learning-content">
+                            <div class="learning-status"><span class="badge badge-warning">Learning Goal</span></div>
+                            <h3>Cloud Engineering</h3>
+                            <p>
+                                Learning core cloud concepts, virtual machines, cloud providers, storage buckets, and deployment pipelines to prepare for a future career in cloud infrastructure.
+                            </p>
+                            <div class="learning-topics">
+                                <span>Cloud Fundamentals</span>
+                                <span>Virtualization</span>
+                                <span>Networking</span>
+                                <span>Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-card animate-on-scroll">
+                        <div class="learning-icon security-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="learning-content">
+                            <div class="learning-status"><span class="badge badge-warning">Learning Goal</span></div>
+                            <h3>Cybersecurity</h3>
+                            <p>
+                                Exploring system security, Linux administration, network protocols, defensive principles, and security best practices to understand how secure systems operate.
+                            </p>
+                            <div class="learning-topics">
+                                <span>Linux OS</span>
+                                <span>Networking Protocols</span>
+                                <span>Security Concepts</span>
+                                <span>Defensive Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Roblox Game Development Banner
+             ===================================================================== -->
+        <section id="game-dev" class="section section-dark">
+            <div class="container">
+                <div class="gamedev-banner animate-on-scroll">
+                    <div class="gamedev-text">
+                        <span class="section-tag"><i class="fa-solid fa-cube"></i> Creative Pursuit</span>
+                        <h2>Roblox Game Development</h2>
+                        <p>
+                            Outside of school, I spend my weekends building Roblox games in <strong>Roblox Studio</strong> using <strong>Luau</strong>. I treat game development as a long-term personal venture with the goal of creating something engaging and impactful.
+                        </p>
+                        <div class="gamedev-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-code"></i> Luau Scripting</div>
+                            <div class="highlight-item"><i class="fa-solid fa-layer-group"></i> Systems Architecture</div>
+                            <div class="highlight-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Gameplay Mechanics</div>
+                        </div>
+                    </div>
+                    <div class="gamedev-graphic">
+                        <div class="game-showcase-box">
+                            <i class="fa-solid fa-gamepad game-large-icon"></i>
+                            <div class="game-status-badge">In Active Development</div>
+                            <h4>Weekend Projects</h4>
+                            <p>Game Loops, UI Systems & DataStores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Featured Projects
+             ===================================================================== -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-desc">Projects and code experiments demonstrating my current capabilities.</p>
+                </div>
+
+                <div id="projects-container" class="projects-grid">
+                    <!-- Populated dynamically via js/projects.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Freelance & Gig Work
+             ===================================================================== -->
+        <section id="services" class="section section-dark">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Services</span>
+                    <h2 class="section-title">Freelance & Gig Work</h2>
+                    <p class="section-desc">Open for freelance opportunities matching my current skill set.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Basic Website Development</h3>
+                        <p>Clean, semantic, responsive websites for personal portfolios or small business landing pages.</p>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <h3>Frontend Tweaks & Layouts</h3>
+                        <p>Fixing layout bugs, improving mobile responsiveness, CSS styling, and navigation menus.</p>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><i class="fa-brands fa-python"></i></div>
+                        <h3>Python Scripting & Tools</h3>
+                        <p>Custom Python scripts to automate repetitive task workflows, organize files, and transform data.</p>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><i class="fa-solid fa-spider"></i></div>
+                        <h3>Web Scraping & Data Extraction</h3>
+                        <p>Extracting public web data into structured JSON, CSV, or text formats cleanly using Python.</p>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><i class="fa-solid fa-cube"></i></div>
+                        <h3>Roblox / Luau Assistance</h3>
+                        <p>Basic Luau scripting, debugging scripts, configuring GUI elements, and setup in Roblox Studio.</p>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3>General Tech Assistance</h3>
+                        <p>Entry-level programming tasks, simple code troubleshooting, data entry scripting, and tech support.</p>
+                    </div>
+                </div>
+
+                <div class="services-callout animate-on-scroll">
+                    <div class="callout-content">
+                        <h4><i class="fa-solid fa-circle-info"></i> Transparent Commitment</h4>
+                        <p>I aim to deliver high-quality work that matches what I can genuinely complete. Let's discuss your project!</p>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Discuss a Gig</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Current Direction / Roadmap
+             ===================================================================== -->
+        <section id="roadmap" class="section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-timeline"></i> Learning Path</span>
+                    <h2 class="section-title">My Current Direction</h2>
+                    <p class="section-desc">A structured progression to build depth in software, security, and cloud infrastructure.</p>
+                </div>
+
+                <div class="roadmap-timeline animate-on-scroll">
+                    <div class="roadmap-step completed-step">
+                        <div class="step-marker"><i class="fa-solid fa-check"></i></div>
+                        <div class="step-content">
+                            <span class="step-num">Step 01</span>
+                            <h3>Web Dev</h3>
+                            <p>HTML5, CSS3, JS DOM, responsive design.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step active-step">
+                        <div class="step-marker"><i class="fa-solid fa-spinner fa-spin"></i></div>
+                        <div class="step-content">
+                            <span class="step-num">Step 02</span>
+                            <h3>Python</h3>
+                            <p>Core logic, OOP, scripting, web scraping.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step in-progress-step">
+                        <div class="step-marker"><i class="fa-solid fa-terminal"></i></div>
+                        <div class="step-content">
+                            <span class="step-num">Step 03</span>
+                            <h3>Linux & Net</h3>
+                            <p>CLI, networking basics, system admin.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step future-step">
+                        <div class="step-marker"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="step-content">
+                            <span class="step-num">Step 04</span>
+                            <h3>Security</h3>
+                            <p>Defensive concepts, system hardening.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step future-step">
+                        <div class="step-marker"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="step-content">
+                            <span class="step-num">Step 05</span>
+                            <h3>Cloud Eng</h3>
+                            <p>Cloud infrastructure, deployments, DevOps.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-note animate-on-scroll">
+                    <p>
+                        <i class="fa-solid fa-gamepad"></i> <strong>Parallel Track:</strong> Roblox game development continues every weekend as a creative personal venture.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Contact Section
+             ===================================================================== -->
+        <section id="contact" class="section section-dark">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Connect</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-desc">Have a project, gig opportunity, or just want to connect? Reach out!</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info-cards animate-on-scroll">
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Bago City, Negros Occidental, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="fa-solid fa-school"></i></div>
+                            <div>
+                                <h4>University</h4>
+                                <p>CHMSU – Alijis Campus (1st Year BSIT)</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:jemsonparcon@gmail.com">jemsonparcon@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/jemsonofficial88" target="_blank" rel="noopener">github.com/jemsonofficial88</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card animate-on-scroll">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm">
+                            <!-- Hidden Honeypot for Anti-Spam -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="juan@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject / Project Type</label>
+                                <input type="text" id="subject" name="subject" placeholder="Web Task / Python Scripting / Gig" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="3" placeholder="Describe what you need help with..." required></textarea>
+                            </div>
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-paper-plane"></i> <span id="btnText">Send Message</span>
+                            </button>
+                            <div id="formStatus" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         Footer
+         ========================================================================= -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#hero" class="brand-logo">
+                    <span class="logo-accent">&lt;</span>Jemson C. Parcon<span class="logo-accent">/&gt;</span>
+                </a>
+                <p>BSIT Student • Web & Python Developer • Lifelong Learner</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#learning">Learning</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jemson C. Parcon. All rights reserved. Built with modern HTML, CSS & JavaScript.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
