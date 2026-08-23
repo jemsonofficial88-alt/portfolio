@@ -325,61 +325,33 @@ function initContactForm() {
         showStatus('Sending your message...', 'loading');
 
         try {
-            // 1. Try sending to the Python backend (local or production)
-            const backendUrls = [
-                '/api/contact',
-                'http://localhost:8000/api/contact'
-            ];
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: '952cf0cf-f318-4cab-b289-b5bee4b9e016',
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    from_name: `${formData.name} (Portfolio Inquiry)`
+                })
+            });
 
-            let success = false;
-            for (const url of backendUrls) {
-                try {
-                    const res = await fetch(url, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(formData)
-                    });
-                    if (res.ok) {
-                        success = true;
-                        break;
-                    }
-                } catch {
-                    // Continue to next endpoint or fallback
-                }
+            const result = await response.json();
+
+            if (result.success) {
+                showStatus(`<i class="fa-solid fa-circle-check"></i> Thank you, ${formData.name}! Your message has been sent successfully to my email.`, 'success');
+                form.reset();
+            } else {
+                throw new Error(result.message || 'Failed to send');
             }
-
-            // 2. If Python backend is offline or static hosting, fallback to Web3Forms
-            if (!success) {
-                try {
-                    const fallbackRes = await fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            access_key: '952cf0cf-f318-4cab-b289-b5bee4b9e016',
-                            name: formData.name,
-                            email: formData.email,
-                            subject: formData.subject,
-                            message: formData.message,
-                            from_name: `${formData.name} (Portfolio Inquiry)`
-                        })
-                    });
-                    if (fallbackRes.ok) {
-                        success = true;
-                    }
-                } catch {
-                    // Fallback to mailto if all APIs unavailable
-                }
-            }
-
-            // Show Success Notification
-            showStatus(`<i class="fa-solid fa-circle-check"></i> Thank you, ${formData.name}! Your message has been sent successfully.`, 'success');
-            form.reset();
         } catch (err) {
             console.error('Contact Form Error:', err);
-            showStatus(`<i class="fa-solid fa-circle-exclamation"></i> Something went wrong. You can also email directly to <a href="mailto:jemsonparcon@gmail.com" style="text-decoration:underline;">jemsonparcon@gmail.com</a>.`, 'error');
+            showStatus(`<i class="fa-solid fa-circle-exclamation"></i> Could not send. You can also email directly to <a href="mailto:jemsonparcon@gmail.com" style="text-decoration:underline;">jemsonparcon@gmail.com</a>.`, 'error');
         } finally {
             submitBtn.disabled = false;
             btnText.innerHTML = originalBtnHtml;
