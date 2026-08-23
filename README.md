@@ -2,7 +2,7 @@
 
 > **1st-Year BSIT Student • Web & Python Developer • Aspiring Cloud & Cybersecurity Specialist • Roblox Game Creator**  
 > Bago City, Negros Occidental, Philippines  
-> 📧 [jemsonparcon@gmail.com](mailto:jemsonparcon@gmail.com) • 🌐 [github.com/jemsonofficial88](https://github.com/jemsonofficial88)
+> 📧 [jemsonparcon@gmail.com](mailto:jemsonparcon@gmail.com) • 🌐 [github.com/jemsonofficial88-alt](https://github.com/jemsonofficial88-alt)
 
 ---
 
